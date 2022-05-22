@@ -14,6 +14,9 @@ class _JavaQuestionState extends State<JavaQuestion> {
       appBar: AppBar(
         title: Text("Java Question"),
       ),
+      body: Center(
+        child: Text("Java Questions"),
+      ),
     );
   }
 }

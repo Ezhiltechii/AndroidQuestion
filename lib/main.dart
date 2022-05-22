@@ -8,7 +8,8 @@ import 'package:question_answer/main_screen.dart';
 
 
 void main() {
-  runApp(MaterialApp(
+
+  runApp( const MaterialApp(
     debugShowCheckedModeBanner: false,
     home: MyApp(),
   ));
@@ -27,7 +28,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     Timer(
-        Duration(seconds: 5),() {
+        const Duration(seconds: 5),() {
       launchScreen();
     }
     );
@@ -44,7 +45,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-        statusBarColor: Theme.of(context).primaryColor,
+        statusBarColor: Theme.of(context).primaryColorDark,
         statusBarIconBrightness: Brightness.light
     ));
 
@@ -57,7 +58,7 @@ class _MyAppState extends State<MyApp> {
             Center(
               child: SizedBox(
                 width: 260,
-                height: 113,
+                height: 260,
                 child: Image.asset(
                     "assets/images/splash_image.png"
                 ),

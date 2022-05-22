@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:question_answer/java_question.dart';
+import 'package:question_answer/android_question.dart';
+import 'package:question_answer/shortcutkeys.dart';
 
 
 class SplashScreen extends StatefulWidget {
@@ -24,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       appBar: AppBar(title: Text("Android Questions")),
       body: const Center(
-        child: Text('My Page!'),
+        child: Text('Java Question....!'),
       ),
       drawer: _sideDrawer(),
     );
@@ -32,6 +33,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   _sideDrawer() {
    return Drawer(
+     backgroundColor: Colors.red,
      child: ListView(
        padding: EdgeInsets.zero,
        children: <Widget>[
@@ -46,11 +48,12 @@ class _SplashScreenState extends State<SplashScreen> {
      return Padding(
      padding: EdgeInsets.fromLTRB(10, 70, 10, 10),
      child: Container(
+
        padding: EdgeInsets.only(bottom: 30),
        decoration: BoxDecoration(
            border: Border(
                bottom:
-               BorderSide(color: Colors.red)
+               BorderSide(color: Colors.white70)
            )
        ),
        child: Row(
@@ -72,14 +75,15 @@ class _SplashScreenState extends State<SplashScreen> {
                              fontSize: 18,
                              color: Colors.black,
 
+
                          )
                      ),
                      SizedBox(
                        height: 10,
                      ),
                      Text(
-                         "",
-                         style: TextStyle(fontSize: 14, color: Colors.grey)
+                         "version ",
+                         style: TextStyle(fontSize: 14, color: Colors.black)
                      )
                    ]),
              ),
@@ -106,7 +110,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 Navigator.pop(context);
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const JavaQuestion()),
+                  MaterialPageRoute(builder: (context) => const SplashScreen()),
                 );
               },
             ),
@@ -132,7 +136,7 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
             decoration: BoxDecoration(
                 border: Border(
-                  bottom: BorderSide(color: Colors.grey.shade300, width: 0.5),
+                  bottom: BorderSide(color: Colors.red.shade700, width: 0.5),
                 )),
           ),
           Container(
@@ -166,7 +170,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 Navigator.pop(context);
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const JavaQuestion()),
+                  MaterialPageRoute(builder: (context) =>  ShortcutKeys()),
                 );
               },
             ),
