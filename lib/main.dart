@@ -1,7 +1,4 @@
 import 'dart:async';
-import 'dart:convert';
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:question_answer/main_screen.dart';
@@ -27,6 +24,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void initState() {
+
     Timer(
         const Duration(seconds: 5),() {
       launchScreen();
@@ -44,10 +42,10 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-        statusBarColor: Theme.of(context).primaryColorDark,
-        statusBarIconBrightness: Brightness.light
-    ));
+    // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    //     statusBarColor: Theme.of(context).primaryColorDark,
+    //     statusBarIconBrightness: Brightness.light
+    // ));
 
 
     return Scaffold(
